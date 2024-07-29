@@ -13,12 +13,13 @@ Welcome to the **Token Miner** project! This tool is designed to "mine" tokens a
   - [Exit](#exit)
 - [Contributing](#contributing)
 
+## Claim your Tokens to buy stuff with, at discord.gg/freevps
+
 ## Features
 
 - **Token Mining**: Generate and mine tokens with a customizable token count.
 - **Token Management**: Print last mined token, generate new addresses, and list saved addresses.
-- **CPU Hogger**: Simulates high CPU usage to test performance and resource management.
-
+ 
 ## Installation
 
 1. **Clone the Repository**
