@@ -44,7 +44,7 @@ Welcome to the **Token Miner** project! This tool is designed to "mine" tokens a
 Run the script to start mining tokens. This will automatically start mining
 
 ```bash
-python token_miner.py
+python main.py
 ```
 
 ### Print Last Token Mined
