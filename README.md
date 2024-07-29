@@ -1,6 +1,3 @@
-Here's a sample `README.md` for your Token Miner project. You can place this file in the root directory of your GitHub repository.
-
-```markdown
 # Token Miner
 
 Welcome to the **Token Miner** project! This tool is designed to "mine" tokens and perform various operations related to token management.
