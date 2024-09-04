@@ -1,9 +1,26 @@
+import subprocess
+import sys
+
+# Install dependencies
+dependencies = ["numba", "cupy", "psutil"]
+for dependency in dependencies:
+    print(f"Installing {dependency}...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", dependency])
+
+# Import dependencies
 import os
 import random
 import hashlib
 import string
 import psutil
+import numba
+import cupy
+from concurrent.futures import ThreadPoolExecutor
 
+# Set the number of threads to use
+NUM_THREADS = psutil.cpu_count(logical=True)
+
+# Set the memory limit
 USE_MEMORY = "3G"
 
 def parse_memory_limit(memory_str):
@@ -38,6 +55,7 @@ def print_mining_log(logs, last_printed_index):
         print(f"{logs[i][0]} Token(s) mined | Token: {logs[i][1]}")
     return len(logs) - 1
 
+@numba.jit(nopython=True, parallel=True)
 def generate_token(length=8):
     chars = string.ascii_letters + string.digits
     return ''.join(random.choice(chars) for _ in range(length))
@@ -154,3 +172,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
